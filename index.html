@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sound of the Internet</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="page">
+
+        <nav class="navbar">
+            <a href="#" class="logo">sound<span>.</span></a>
+            <p class="nav-label">YOUR INTERNET RADIO</p>
+        </nav>
+
+        <header class="hero">
+            <p class="eyebrow">A WORLD OF MUSIC, ONE CLICK AWAY</p>
+            <h1>Find your<br><span>next obsession.</span></h1>
+            <p class="hero-text">
+                Discover songs, explore new sounds and find something
+                you didn't know you needed to hear.
+            </p>
+        </header>
+
+        <section class="search-section">
+            <form id="searchForm">
+                <span class="search-symbol">⌕</span>
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search a song, artist or album..."
+                    required
+                >
+                <button type="submit">Search</button>
+            </form>
+        </section>
+
+        <section class="discover-section">
+
+            <div class="section-header">
+                <div>
+                    <p class="eyebrow">EXPLORE YOUR SOUND</p>
+                    <h2>Pick a mood.</h2>
+                </div>
+                <button id="surpriseButton" class="surprise-button">
+                    ✦ Surprise me
+                </button>
+            </div>
+
+            <div class="genres" id="genreButtons">
+                <button class="genre active" data-genre="pop">Pop</button>
+                <button class="genre" data-genre="r&b">R&B</button>
+                <button class="genre" data-genre="hip hop">Hip-Hop</button>
+                <button class="genre" data-genre="indie">Indie</button>
+                <button class="genre" data-genre="alternative">Alternative</button>
+                <button class="genre" data-genre="afrobeats">Afrobeats</button>
+            </div>
+
+            <div class="results-heading">
+                <h2 id="resultsTitle">Popular discoveries</h2>
+                <span id="resultCount">Loading music...</span>
+            </div>
+
+            <p id="status" class="status" aria-live="polite"></p>
+
+            <div id="musicGrid" class="music-grid"></div>
+
+        </section>
+
+        <section class="player-section">
+            <div class="player-art">
+                <img id="playerImage"
+                     src=""
+                     alt="Album artwork"
+                     class="hidden">
+                <span id="playerPlaceholder">♫</span>
+            </div>
+
+            <div class="player-info">
+                <p class="playing-label">NOW PREVIEWING</p>
+                <h3 id="playerTitle">Choose a song</h3>
+                <p id="playerArtist">Your next favourite could be here.</p>
+                <a id="appleLink" href="https://music.apple.com/" target="_blank">
+                    View on Apple Music ↗
+                </a>
+            </div>
+
+            <div class="player-controls">
+                <button id="playButton" class="play-button" aria-label="Play or pause">▶</button>
+                <div class="progress-container">
+                    <div id="progressBar" class="progress-bar"></div>
+                </div>
+                <span id="playerTime">0:00</span>
+            </div>
+
+            <audio id="audioPlayer"></audio>
+        </section>
+
+        <footer>
+            <p>SOUND OF THE INTERNET © 2026</p>
+            <p>DISCOVER SOMETHING NEW.</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
